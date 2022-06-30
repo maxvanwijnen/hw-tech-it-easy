@@ -161,3 +161,14 @@ const inventory = [
     sold: 8,
   },
 ];
+
+//Opdracht 1a
+
+// Maak een nieuwe array met tv-types
+const tvTypes = inventory.map((item) => {
+  return  item.type;
+});
+
+console.log(tvTypes);
+
+
