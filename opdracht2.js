@@ -16,7 +16,7 @@ console.log(totalTvsSold);
 //Opdracht 2b
 
 const TvsSoldAmountElement = document.getElementById('tvs-sold-amount');
-TvsSoldAmountElement.innerText = totalTvsSold;
+TvsSoldAmountElement.innerHTML = `<h2>Totaal verkocht</h2><p>${totalTvsSold}</p>`;
 
 
 //Opdracht 2c: Hoeveel tv's heeft Tech It Easy ingekocht?
@@ -33,3 +33,6 @@ inventory.map((item) => {
 
 console.log(totalPurchased);
 
+
+tvsPurchasedAmountElement = document.getElementById('tvs-purchased-amount');
+tvsPurchasedAmountElement.innerHTML = `<h2>Totaal ingekocht</h2><p>${totalPurchased}</p>`;
