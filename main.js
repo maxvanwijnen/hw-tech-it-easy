@@ -166,9 +166,19 @@ const inventory = [
 
 // Maak een nieuwe array met tv-types
 const tvTypes = inventory.map((item) => {
-  return  item.type;
+  return item.type;
 });
 
 console.log(tvTypes);
+
+
+//Opdracht 1b
+
+const soldOutTvs = inventory.filter((item) => {
+  return (item.originalStock - item.sold) > 0;
+});
+
+console.log(soldOutTvs);
+
 
 
