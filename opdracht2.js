@@ -12,3 +12,7 @@ for (let i = 0; i < inventory.length; i++) {
 console.log(totalTvsSold);
 
 
+//Opdracht 2b
+
+const TvsSoldAmountElement = document.getElementById('tvs-sold-amount');
+TvsSoldAmountElement.innerText = totalTvsSold;
