@@ -40,3 +40,8 @@ console.log(totalPurchased);
 tvsPurchasedAmountElement = document.getElementById('tvs-purchased-amount');
 tvsPurchasedAmountElement.innerHTML = `<h2>Totaal ingekocht</h2><p>${totalPurchased}</p>`;
 
+const totalToSell = totalPurchased - totalTvsSold;
+
+tvsToSellElement = document.getElementById('tvs-to-sell-amount');
+tvsToSellElement.innerHTML = `<h2>Verkoop target</h2><p>${totalToSell}</p>`;
+
