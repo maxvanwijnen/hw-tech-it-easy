@@ -181,7 +181,13 @@ const soldOutTvs = inventory.filter((item) => {
 
 console.log(soldOutTvs);
 
+//Opdracht 1c: Gebruik een array-methode om alle tv's te verzamelen (de hele objecten) die over AmbiLight beschikken. Log de uitkomst in de console.
 
+const ambilightTvs = inventory.filter((item) => {
+  return item.options.ambiLight === true;
+});
+console.log('-------');
+console.log(ambilightTvs);
 
 
 
