@@ -173,12 +173,15 @@ console.log(tvTypes);
 
 
 //Opdracht 1b
-
+//Maak een nieuwe array en filter op originalStock - Sold > 0
+//Indien true voeg toe aan nieuwe array
 const soldOutTvs = inventory.filter((item) => {
   return (item.originalStock - item.sold) > 0;
 });
 
 console.log(soldOutTvs);
+
+
 
 
 
