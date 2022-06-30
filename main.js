@@ -186,8 +186,32 @@ console.log(soldOutTvs);
 const ambilightTvs = inventory.filter((item) => {
   return item.options.ambiLight === true;
 });
-console.log('-------');
+
 console.log(ambilightTvs);
+
+
+//Opdracht 1d: Schrijf een functie die alle tv's van laagste naar hoogste prijs sorteert. Log de uitkomst in de console.
+
+//declareer een functie
+//gebruik de sort methode om op basis van prijs te sorteren
+function orderByPrice(inventory){
+
+  return inventory.sort((a , b) => {
+    if (a.price > b.price){
+      return 1;
+    }
+    else if (a.price < b.price) {
+      return -1;
+    }
+    else {
+      return 0;
+    }
+  })
+}
+
+
+console.log(orderByPrice(inventory));
+
 
 
 
