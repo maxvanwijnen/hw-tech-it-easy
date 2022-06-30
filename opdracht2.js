@@ -33,6 +33,10 @@ inventory.map((item) => {
 
 console.log(totalPurchased);
 
+//Opdracht 2d: Zorg ervoor dat dit aantal in het blauw wordt weergegeven op de pagina.
 
+//Zoek het element op in de dom
+//Voeg de TotalPurchased waarde toa aan het element
 tvsPurchasedAmountElement = document.getElementById('tvs-purchased-amount');
 tvsPurchasedAmountElement.innerHTML = `<h2>Totaal ingekocht</h2><p>${totalPurchased}</p>`;
+
