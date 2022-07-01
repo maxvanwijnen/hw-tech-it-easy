@@ -1,0 +1,45 @@
+:root {
+    --color-red: #FF6B6B;
+    --color-green:#00BD9D;
+    --color-blue:#0094c6;
+}
+* {
+    padding: 0px;
+    margin:0px;
+    font-family: 'Arial';
+    color: #444;
+}
+
+h2 {
+    padding:10px 0px;
+}
+.totalWrapper {
+    margin:10px auto;
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+}
+
+.totalWrapper .totalCounter {
+    text-align: center;
+}
+
+.totalWrapper .totalCounter h2 {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.totalWrapper .totalCounter p {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.totalWrapper #tvs-purchased-amount p{
+    color:var(--color-blue);
+}
+.totalWrapper #tvs-sold-amount p {
+    color:var(--color-green);
+}
+.totalWrapper #tvs-to-sell-amount p{
+    color:var(--color-red);
+}
