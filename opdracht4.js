@@ -12,4 +12,14 @@ function generateProductTitle(type){
 
     return `${tv.brand} ${tv.type} - ${tv.name}`;
 }
-console.log(generateProductTitle('43PUS6504/12'));
+//console.log(generateProductTitle('43PUS6504/12'));
+
+//Opdracht 4b: Maak een herbruikbare functie die de prijs van één tv als parameter verwacht (zoals 379 of 159)
+// teruggeeft in het format €379,- of €159,-.
+
+//declareer een functie met die paramater originalPrice
+//return de geformatte waarde met het euro teken e.d.
+function formatPrice(originalPrice) {
+    return `€${originalPrice},-`
+}
+
