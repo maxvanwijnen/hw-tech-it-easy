@@ -13,33 +13,33 @@
 h2 {
     padding:10px 0px;
 }
-.totalWrapper {
+.wrapper {
     margin:10px auto;
     display: flex;
     justify-content: space-between;
     max-width: 800px;
 }
 
-.totalWrapper .totalCounter {
+.wrapper .totalCounter {
     text-align: center;
 }
 
-.totalWrapper .totalCounter h2 {
+.wrapper .totalCounter h2 {
     font-size: 18px;
     font-weight: normal;
 }
 
-.totalWrapper .totalCounter p {
+.wrapper .totalCounter p {
     font-size: 30px;
     font-weight: bold;
 }
 
-.totalWrapper #tvs-purchased-amount p{
+.wrapper #tvs-purchased-amount p{
     color:var(--color-blue);
 }
-.totalWrapper #tvs-sold-amount p {
+.wrapper #tvs-sold-amount p {
     color:var(--color-green);
 }
-.totalWrapper #tvs-to-sell-amount p{
+.wrapper #tvs-to-sell-amount p{
     color:var(--color-red);
 }
