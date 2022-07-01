@@ -5,12 +5,28 @@
 //map door de inventory  lijstheen
 //haal de brands op en zet ze in eenarray
 
-brandListHTML = '';
+let brandListHTML = '<ul>';
 inventory.map((item) => {
-    brandListHTML = brandListHTML + `<div>${item.brand}</div>`;
+    brandListHTML = `${brandListHTML} <li>${item.brand}</li>`;
 });
+brandListHTML = `${brandListHTML} </ul>`;
 
 const brandListElement = document.getElementById('brand-list');
 brandListElement.innerHTML = brandListHTML;
 
-//Opdracht 3b: Schrijf de code uit 3a om naar een functie die een array met tv-objecten verwacht. Het is handig om onze scripts als functies op te zetten, zodat we ze gemakkelijk kunnen hergebruiken. Tip: vergeet deze functie -declaratie niet aan te roepen!
+//Opdracht 3b: Schrijf de code uit 3a om naar een functie die een array met tv-objecten verwacht.
+//Het is handig om onze scripts als functies op te zetten, zodat we ze gemakkelijk kunnen hergebruiken.
+// Tip: vergeet deze functie -declaratie niet aan te roepen!
+
+function createPropertyList( inputArray , property , elementId ) {
+    let listHTML = '<ul>';
+    inputArray.map((item) => {
+        listHTML = `${listHTML} <li>${item[property]}</li>`;
+    });
+    listHTML = `${listHTML} </ul>`;
+
+    const brandListElement = document.getElementById( elementId );
+    brandListElement.innerHTML = listHTML;
+}
+// argumenten : 1. de input array 2. key om te tonen 3. het id van het html elemenet waar het getoond moet worden
+createPropertyList( inventory,'type' , 'type-list');
