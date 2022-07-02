@@ -1,7 +1,7 @@
 //Opdracht 2a: Hoeveel tv's zijn er al verkocht? Schrijf een script dat dit berekent. Log de uitkomst in de console
 
 //declare variabele waarin we aantal verkochte tvs opslaan
-//voore elke tv in de inventory haal het aantal sold op en  tel het op bij totalTvsSold
+//voor elke tv in de inventory haal het aantal sold op en  tel het op bij totalTvsSold
 //log het totaalTvsSold
 
 let totalTvsSold = 0;
@@ -36,7 +36,7 @@ console.log(totalPurchased);
 //Opdracht 2d: Zorg ervoor dat dit aantal in het blauw wordt weergegeven op de pagina.
 
 //Zoek het element op in de dom
-//Voeg de TotalPurchased waarde toa aan het element
+//Voeg de TotalPurchased waarde toe aan het element
 tvsPurchasedAmountElement = document.getElementById('tvs-purchased-amount');
 tvsPurchasedAmountElement.innerHTML = `<h2>Totaal ingekocht</h2><p>${totalPurchased}</p>`;
 
