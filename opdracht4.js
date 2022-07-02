@@ -56,3 +56,46 @@ function generateSizeString(type){
     return screenSizeString;
 }
 generateSizeString('43PUS6504/12');
+
+//Opdracht 4d: Schrijf een script die de informatie van de Philips 43PUS6504/12 tv weergeeft op de pagina zoals onderstaand voorbeeld.
+//Gebruik de functies die je hebt gemaakt in opdracht 4a, 4b en 4c.
+
+function generateProductTile(type){
+
+    //dit is eigenlijk dubbel op voor de title en size , want daar doe ik ook een find in de generate fucntie
+    //maar hij is nodig voor de price om dat de formatPrice functie nu alleen een string format en niet de entry zoekt
+    //om me netjes aan de opdracht daar te houden heb ik die functie niet aangepast en staat de find in deze functie
+    const tv = inventory.find((item) => {
+        return item.type === type;
+    });
+
+    const productTileHTML = '<div>';
+
+    const titleHTML = `<div>${generateProductTitle(tv.type)}</div>`;
+    const priceHTML = `<div>${formatPrice(tv.price)}</div>`;
+    const sizesHTML = `<div>${generateSizeString(tv.type)}</div>`;
+
+    return `${titleHTML}
+            ${priceHTML}
+            ${sizesHTML}`;
+}
+
+const productTile = document.getElementById('product-tile');
+productTile.innerHTML = generateProductTile('43PUS6504/12');
+
+//Opdracht 4e: Maak een herbruikbare functie die de informatie van alle tv's weergeeft op de pagina.
+// Gebruik hiervoor de map-methode in combinatie met de functies die je hebt gemaakt in opdracht 4a, 4b en 4c.
+
+function generateProductGrid() {
+    let productGrid = '<div class="product-grid">';
+    inventory.map((item) => {
+        productGrid = `${productGrid} <div class="product-tile"> ${generateProductTile(item.type)}</div>`;
+    });
+    return `${productGrid} </div>`;
+}
+const productGrid = document.getElementById('product-grid');
+productGrid.innerHTML = generateProductGrid();
+
+
+
+
