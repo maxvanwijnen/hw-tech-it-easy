@@ -86,15 +86,17 @@ productTile.innerHTML = generateProductTile('43PUS6504/12');
 //Opdracht 4e: Maak een herbruikbare functie die de informatie van alle tv's weergeeft op de pagina.
 // Gebruik hiervoor de map-methode in combinatie met de functies die je hebt gemaakt in opdracht 4a, 4b en 4c.
 
-function generateProductGrid() {
+function generateProductGrid(itemsToShow) {
     let productGrid = '<div class="product-grid">';
-    inventory.map((item) => {
+    itemsToShow.map((item) => {
         productGrid = `${productGrid} <div class="product-tile"> ${generateProductTile(item.type)}</div>`;
     });
     return `${productGrid} </div>`;
 }
 const productGrid = document.getElementById('product-grid');
-productGrid.innerHTML = generateProductGrid();
+productGrid.innerHTML = generateProductGrid(inventory);
+
+
 
 
 
